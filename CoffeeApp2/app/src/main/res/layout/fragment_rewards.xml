@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.RewardsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/title"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/header"
+        android:text="@string/hello_blank_fragment" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_margin="26dp"
+        tools:layout="@layout/fragment_reward_table"
+        android:name="com.hfad.coffeeapp.fragments.RewardTableFragment"
+
+        android:id="@+id/fragment_rewards"/>
+
+    <RelativeLayout
+        android:id="@+id/redeem"
+        android:layout_width="match_parent"
+        android:layout_height="108dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:layout_below="@id/fragment_rewards"
+        android:background="@drawable/rectangle_2">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/redeem_points_manage"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/my_points"
+                android:text="My Points: "/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/redeem_points"
+                android:textAppearance="@style/my_points"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:text="1000"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/redeem_button"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginTop="30dp"
+            android:text="Redeem Drinks"
+            android:background="@drawable/rectangle_6"
+            android:textAppearance="@style/my_points"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/redeem_points_manage"
+            android:src="@drawable/coffee"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

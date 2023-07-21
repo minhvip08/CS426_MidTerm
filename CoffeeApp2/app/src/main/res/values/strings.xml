@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CoffeeApp</string>
+    <string name="good_mornin">Good Morning</string>
+    <string name="anderson">Anderson</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loyalty_car">Loyalty card</string>
+    <string name="some_id">4/8</string>
+    <string name="your_orders">Choose your coffee</string>
+</resources>

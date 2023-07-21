@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="30dp"
+
+    android:layout_centerVertical="true"
+    android:layout_height="30dp">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/coffee_cup_not_bought"
+        android:id="@+id/imageCup"
+        android:textAlignment="center"/>
+
+</LinearLayout>

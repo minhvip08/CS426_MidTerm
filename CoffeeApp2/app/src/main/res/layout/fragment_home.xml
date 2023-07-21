@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:id="@+id/header">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/headerName"
+            android:layout_weight="0.7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/good_mornin"
+                android:layout_width="match_parent"
+                android:layout_height="21dp"
+                android:text="@string/good_mornin"
+                android:textAppearance="@style/good_mornin"
+                android:gravity="top"
+                />
+
+            <TextView
+                android:id="@+id/anderson"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+
+                android:text="@string/anderson"
+                android:textAppearance="@style/anderson"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/profile_user"/>
+
+            <Button
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/buy_user"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        tools:layout="@layout/fragment_reward_table"
+        android:name="com.hfad.coffeeapp.fragments.RewardTableFragment"
+
+        android:id="@+id/fragment_rewards"/>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/fragment_rewards"
+        android:orientation="vertical"
+        android:background="@drawable/rectangle_3">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="26dp"
+            android:text="@string/your_orders"
+            android:id="@+id/your_orders"
+            android:textAppearance="@style/choose_your"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/fragment_home_recycler_view"
+            android:layout_below="@id/your_orders"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"/>
+
+
+
+    </RelativeLayout>
+</RelativeLayout>
