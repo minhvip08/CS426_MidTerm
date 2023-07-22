@@ -38,6 +38,7 @@
         <item name="android:textSize">16sp</item>
         <item name="android:letterSpacing">-0.02</item>
         <item name="android:textColor">#001833</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="my_points">

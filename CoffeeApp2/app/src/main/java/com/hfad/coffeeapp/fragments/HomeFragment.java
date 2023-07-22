@@ -2,6 +2,7 @@ package com.hfad.coffeeapp.fragments;
 
 import android.os.Bundle;
 
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hfad.coffeeapp.MainActivity;
 import com.hfad.coffeeapp.R;
 import com.hfad.coffeeapp.adapters.AdapterCoffee;
 import com.hfad.coffeeapp.data.AppData;
@@ -27,6 +29,8 @@ public class HomeFragment extends Fragment {
     List<Integer> imagesCoffee;
     List<String> namesCoffee;
     AppData appData;
+    private Toolbar mActionBarToolbar;
+
 
     @Override
     public void onStart() {
@@ -45,6 +49,9 @@ public class HomeFragment extends Fragment {
         homeRecycler.setLayoutManager(gridLayoutManager);
         homeRecycler.setAdapter(adapterCoffee);
 
+        mActionBarToolbar = getActivity().findViewById(R.id.toolbar);
+        ((MainActivity) requireActivity()).setSupportActionBar(mActionBarToolbar);
+        ((MainActivity) requireActivity()).getSupportActionBar().hide();
 
     }
 
